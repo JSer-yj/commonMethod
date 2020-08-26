@@ -1,0 +1,185 @@
+article, aside, blockquote, body, button, code, dd, details, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul {
+  margin: 0;
+  padding: 0;
+}
+
+input, select, textarea {
+  font-size: 100%;
+  -webkit-appearance: none;
+  border: none;
+  background-color: #ffffff;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+*{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    ::-webkit-scrollbar{display: none;}
+}
+
+@mixin TextOverflow($line:1, $width:100%){
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display:-webkit-box;
+    width: $width;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:$line;
+}
+@mixin Icon($url, $width:30rpx, $height:30rpx, $top:0, $right:0, $bottom:0, $left:0) {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  width: $width;
+  height: $height;
+  background: url($url) center/100% 100%;
+  margin: $top $right $bottom $left;
+}
+
+.formateBox {
+    vertical-align: top;
+    font-size: 0;
+}
+
+
+
+/************** Animation ***************/ 
+@keyframes fade {
+  0% {
+      opacity: 0
+  }
+
+  100% {
+      opacity: 1
+  }
+}
+
+@keyframes scale-up {
+  0% {
+      opacity: 0;
+      transform: scale(.2)
+  }
+
+  100% {
+      opacity: 1;
+      transform: scale(1)
+  }
+}
+
+@keyframes scale-down {
+  0% {
+      opacity: 0;
+      transform: scale(1.8)
+  }
+
+  100% {
+      opacity: 1;
+      transform: scale(1)
+  }
+}
+
+@keyframes slide-top {
+  0% {
+      opacity: 0;
+      transform: translateY(-100%)
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0)
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+      opacity: 0;
+      transform: translateY(100%)
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0)
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+      transform: translateX(0)
+  }
+
+  10% {
+      transform: translateX(-9px)
+  }
+
+  20% {
+      transform: translateX(8px)
+  }
+
+  30% {
+      transform: translateX(-7px)
+  }
+
+  40% {
+      transform: translateX(6px)
+  }
+
+  50% {
+      transform: translateX(-5px)
+  }
+
+  60% {
+      transform: translateX(4px)
+  }
+
+  70% {
+      transform: translateX(-3px)
+  }
+
+  80% {
+      transform: translateX(2px)
+  }
+
+  90% {
+      transform: translateX(-1px)
+  }
+}
+
+@keyframes slide-left {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%)
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0)
+  }
+}
+
+@keyframes slide-right {
+  0% {
+      opacity: 0;
+      transform: translateX(100%)
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0)
+  }
+}
